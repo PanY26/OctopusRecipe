@@ -13,3 +13,4 @@ eric bachman is fat and sad
 我的室友很胖
 
 FOR EDUCATIONAL PROPOSES ONLY
+ACKNOWLEDGMENT: XIANGHA.COM, APPLE INC.
