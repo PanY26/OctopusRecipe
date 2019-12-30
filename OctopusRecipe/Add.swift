@@ -29,7 +29,8 @@ struct Add: View {
                 Button(action: {
                     if self.newRecipe.name != "" && self.newRecipe.recipe != "" {
                         self.presentationMode.wrappedValue.dismiss()
-                        recipeData.append(self.newRecipe)
+                        let arhieveURL = writeData(newRecipe: self.newRecipe)
+                        recipeData.append((readData(arhiveURL: arhieveURL)!))
                     } else {
                         self.showingAlert = true
                     }

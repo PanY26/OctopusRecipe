@@ -22,6 +22,7 @@
 		A1092AB823B83CD100D108CA /* RecipeData.json in Resources */ = {isa = PBXBuildFile; fileRef = A1092AB723B83CD000D108CA /* RecipeData.json */; };
 		A1092ABA23B83F6800D108CA /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1092AB923B83F6800D108CA /* Recipe.swift */; };
 		A1092ABC23B84CF900D108CA /* RecipeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1092ABB23B84CF900D108CA /* RecipeData.swift */; };
+		A1092ABE23B98CC500D108CA /* UpdateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1092ABD23B98CC500D108CA /* UpdateData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		A1092AB723B83CD000D108CA /* RecipeData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = RecipeData.json; sourceTree = "<group>"; };
 		A1092AB923B83F6800D108CA /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		A1092ABB23B84CF900D108CA /* RecipeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeData.swift; sourceTree = "<group>"; };
+		A1092ABD23B98CC500D108CA /* UpdateData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				A1092A8023B74B4D00D108CA /* SceneDelegate.swift */,
 				A1092A8223B74B4D00D108CA /* ContentView.swift */,
 				A1092AB423B7534A00D108CA /* Add.swift */,
+				A1092ABD23B98CC500D108CA /* UpdateData.swift */,
 				A1092AB223B74C3500D108CA /* SecondTab.swift */,
 				A1092A8423B74B5700D108CA /* Assets.xcassets */,
 				A1092A8923B74B5700D108CA /* LaunchScreen.storyboard */,
@@ -291,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1092ABE23B98CC500D108CA /* UpdateData.swift in Sources */,
 				A1092AB123B74B8800D108CA /* About.swift in Sources */,
 				A1092A7F23B74B4D00D108CA /* AppDelegate.swift in Sources */,
 				A1092AB523B7534A00D108CA /* Add.swift in Sources */,
