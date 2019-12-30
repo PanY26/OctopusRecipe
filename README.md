@@ -2,11 +2,9 @@
 
 my name is Jian Yang
 
-Question for you 
-What’s better than octopus recipe? 
+Question for you What’s better than octopus recipe? 
 
-Answer for you.
-Eight recipes for octopus
+Answer for you Eight recipes for octopus
 
 eric bachman is fat and sad
 
