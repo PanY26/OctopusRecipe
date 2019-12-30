@@ -22,14 +22,14 @@ func setURL () -> URL {
 
 func writeData(newRecipe: Recipe, arhiveURL: URL) {
     let encoder = JSONEncoder()
-    let encodedRecipe = try? encoder.encode([newRecipe] + runtimeRecipeData)
+    let encodedRecipe = try? encoder.encode(runtimeRecipeData + [newRecipe])
     try? encodedRecipe?.write(to: arhiveURL)
 }
 
 func readData<Recipe: Decodable>(arhiveURL: URL) -> Recipe? {
     let decoder = JSONDecoder()
-    let retrievedRecipeData = try? Data(contentsOf: arhiveURL)
-    let decodedRecipes: Recipe? = try? decoder.decode(Recipe.self, from: retrievedRecipeData!)
+    guard let retrievedRecipeData = try? Data(contentsOf: arhiveURL) else { return nil }
+    let decodedRecipes = try? decoder.decode(Recipe.self, from: retrievedRecipeData)
     return decodedRecipes
 }
 

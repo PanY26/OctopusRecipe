@@ -29,9 +29,8 @@ struct Add: View {
                 Button(action: {
                     if self.newRecipe.name != "" && self.newRecipe.recipe != "" {
                         self.presentationMode.wrappedValue.dismiss()
-                        runtimeRecipeData.append(self.newRecipe)
                         writeData(newRecipe: self.newRecipe, arhiveURL: getURL())
-
+                        runtimeRecipeData.append(self.newRecipe)
                     } else {
                         self.showingAlert = true
                     }
