@@ -8,6 +8,8 @@
 
 import SwiftUI
 
+var runtimeRecipeData: [Recipe] = readData(arhiveURL: getURL()) ?? recipeData
+
 struct ContentView: View {
     @State private var selection = 0
     @State var modalDisplayed = false
@@ -15,7 +17,7 @@ struct ContentView: View {
     var body: some View {
         TabView(selection: $selection){
             NavigationView {
-                List(recipeData) { recipe in
+                List(runtimeRecipeData) { recipe in
                     NavigationLink(destination: RecipeView(recipe: recipe)){
                         Text(recipe.name)
                     }

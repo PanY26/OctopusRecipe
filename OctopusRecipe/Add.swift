@@ -10,7 +10,7 @@ import SwiftUI
 
 struct Add: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @State var newRecipe: Recipe = Recipe(name: "", recipe: "", id: recipeData.count)
+    @State var newRecipe: Recipe = Recipe(name: "", recipe: "", id: runtimeRecipeData.count)
     @State private var showingAlert = false
 
 
@@ -29,8 +29,9 @@ struct Add: View {
                 Button(action: {
                     if self.newRecipe.name != "" && self.newRecipe.recipe != "" {
                         self.presentationMode.wrappedValue.dismiss()
-                        let arhieveURL = writeData(newRecipe: self.newRecipe)
-                        recipeData.append((readData(arhiveURL: arhieveURL)!))
+                        runtimeRecipeData.append(self.newRecipe)
+                        writeData(newRecipe: self.newRecipe, arhiveURL: getURL())
+
                     } else {
                         self.showingAlert = true
                     }
