@@ -2,9 +2,13 @@
 
 my name is Jian Yang
 
-Question for you What’s better than octopus recipe? 
+Question for you:
 
-Answer for you Eight recipes for octopus
+What’s better than octopus recipe? 
+
+Answer for you:
+
+Eight recipes for octopus
 
 eric bachman is fat and sad
 
@@ -13,4 +17,5 @@ eric bachman is fat and sad
 我的室友很胖
 
 FOR EDUCATIONAL PROPOSES ONLY
+
 ACKNOWLEDGMENT: XIANGHA.COM, APPLE INC.
