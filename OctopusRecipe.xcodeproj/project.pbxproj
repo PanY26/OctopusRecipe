@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,6 +23,7 @@
 		A1092ABA23B83F6800D108CA /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1092AB923B83F6800D108CA /* Recipe.swift */; };
 		A1092ABC23B84CF900D108CA /* RecipeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1092ABB23B84CF900D108CA /* RecipeData.swift */; };
 		A1092ABE23B98CC500D108CA /* UpdateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1092ABD23B98CC500D108CA /* UpdateData.swift */; };
+		A1F25B4C23BAD54600689FC1 /* TextView in Frameworks */ = {isa = PBXBuildFile; productRef = A1F25B4B23BAD54600689FC1 /* TextView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1F25B4C23BAD54600689FC1 /* TextView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +180,9 @@
 			dependencies = (
 			);
 			name = OctopusRecipe;
+			packageProductDependencies = (
+				A1F25B4B23BAD54600689FC1 /* TextView */,
+			);
 			productName = OctopusRecipe;
 			productReference = A1092A7B23B74B4D00D108CA /* OctopusRecipe.app */;
 			productType = "com.apple.product-type.application";
@@ -250,6 +255,9 @@
 				Base,
 			);
 			mainGroup = A1092A7223B74B4D00D108CA;
+			packageReferences = (
+				A1F25B4A23BAD54500689FC1 /* XCRemoteSwiftPackageReference "TextView" */,
+			);
 			productRefGroup = A1092A7C23B74B4D00D108CA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -633,6 +641,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A1F25B4A23BAD54500689FC1 /* XCRemoteSwiftPackageReference "TextView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kenmueller/TextView";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A1F25B4B23BAD54600689FC1 /* TextView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1F25B4A23BAD54500689FC1 /* XCRemoteSwiftPackageReference "TextView" */;
+			productName = TextView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A1092A7323B74B4D00D108CA /* Project object */;
 }

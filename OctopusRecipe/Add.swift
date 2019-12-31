@@ -7,11 +7,13 @@
 //
 
 import SwiftUI
+import TextView
 
 struct Add: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State var newRecipe: Recipe = Recipe(name: "", recipe: "", id: runtimeRecipeData.count)
     @State private var showingAlert = false
+    @State var isEditing = false
 
 
     var body: some View {
@@ -21,11 +23,15 @@ struct Add: View {
                     TextField("这道菜叫什么...", text: $newRecipe.name)
                 }
                 Section(header: Text("工序")) {
-                    TextField("这道菜怎么做...", text: $newRecipe.recipe)
+                    TextView(text: $newRecipe.recipe, isEditing: $isEditing).frame(height:400)
                 }
             }
-            .navigationBarTitle(Text("\(newRecipe.name)"), displayMode: .inline)
-            .navigationBarItems(trailing:
+            .navigationBarTitle(Text("新菜品"), displayMode: .inline)
+            .navigationBarItems(leading: Button(action: {
+                self.presentationMode.wrappedValue.dismiss()
+            }) {
+                Text("删除").foregroundColor(.red)
+                }, trailing:
                 Button(action: {
                     if self.newRecipe.name != "" && self.newRecipe.recipe != "" {
                         self.presentationMode.wrappedValue.dismiss()
@@ -35,7 +41,7 @@ struct Add: View {
                         self.showingAlert = true
                     }
                 }) {
-                    Text("添加")
+                    Text("添加").fontWeight(.bold)
                 }
                 .alert(isPresented: $showingAlert) {
                     Alert(title: Text("有留白"), message: Text("请填好所有空"),

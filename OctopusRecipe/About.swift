@@ -10,7 +10,7 @@ import SwiftUI
 
 struct About: View {
     var body: some View {
-        Text("Ten ways to cook 🐙").font(Font.system(size: 100.0)).padding()
+        Text("Eight ways to cook 🐙").font(Font.system(size: 100.0)).padding()
     }
 }
 

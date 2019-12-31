@@ -12,15 +12,20 @@ struct RecipeView: View {
     var recipe: Recipe
     
     var body: some View {
-        
-        VStack(alignment: .leading) {
-            Image(recipe.name).resizable()
-                .aspectRatio(contentMode: .fit)
-            ScrollView{
-                Text(recipe.recipe).padding().font(.body)
+        ScrollView {
+            VStack {
+                if UIImage(named: recipe.name) != nil {
+                    Image(recipe.name).resizable()
+                        .aspectRatio(contentMode: .fit)
+                }
+                Text(recipe.recipe).padding()
             }
-        }
-        .navigationBarTitle(Text(recipe.name))
+        }.navigationBarTitle(Text(recipe.name))
+            .navigationBarItems(trailing:
+                Button(action:{
+                }) {
+                    Image(systemName: "trash").foregroundColor(.red)
+                })
     }
 }
 
