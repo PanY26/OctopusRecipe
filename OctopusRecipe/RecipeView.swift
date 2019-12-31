@@ -10,6 +10,7 @@ import SwiftUI
 
 struct RecipeView: View {
     var recipe: Recipe
+    @Environment(\.presentationMode) private var mode: Binding<PresentationMode>
     
     var body: some View {
         ScrollView {
@@ -23,6 +24,8 @@ struct RecipeView: View {
         }.navigationBarTitle(Text(recipe.name))
             .navigationBarItems(trailing:
                 Button(action:{
+                    removeData(removedRecipe: self.recipe, arhiveURL: getURL())
+                    self.mode.wrappedValue.dismiss()
                 }) {
                     Image(systemName: "trash").foregroundColor(.red)
                 })

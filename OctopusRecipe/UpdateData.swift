@@ -33,4 +33,12 @@ func readData<Recipe: Decodable>(arhiveURL: URL) -> Recipe? {
     return decodedRecipes
 }
 
+func removeData(removedRecipe: Recipe, arhiveURL: URL) {
+    let index: Int = runtimeRecipeData.firstIndex(where: {$0 == removedRecipe})!
+    runtimeRecipeData.remove(at: index)
+    let encoder = JSONEncoder()
+    let encodedRecipe = try? encoder.encode(runtimeRecipeData)
+    try? encodedRecipe?.write(to: arhiveURL)
+}
+
 
