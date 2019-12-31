@@ -11,6 +11,8 @@ import SwiftUI
 struct RecipeView: View {
     var recipe: Recipe
     @Environment(\.presentationMode) private var mode: Binding<PresentationMode>
+    @State private var showingAlert = true
+
     
     var body: some View {
         ScrollView {
@@ -29,6 +31,10 @@ struct RecipeView: View {
                 }) {
                     Image(systemName: "trash").foregroundColor(.red)
                 })
+                .alert(isPresented: $showingAlert) {
+                    Alert(title: Text("已删除"), message: Text("食谱会在应用重启后消失")
+                    )
+                }
     }
 }
 
